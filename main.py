@@ -22,7 +22,7 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Dear Fellow Scholars..."}
 
 @app.post("/echo")
 async def echo(request: Request):

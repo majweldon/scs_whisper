@@ -4,10 +4,10 @@ import requests
 
 ctx = snowflake.connector.connect(
    authenticator="externalbrowser",
-   user="kevin.lonergan@albertahealthservices.ca",
+   user="michael.weldon@albertahealthservices.ca",
    account="ahsorg-ahsprod",
    database = 'DB_TEAM_JENKINS',
-   schema = 'KL_TEST_JENKINS',
+   schema = 'MW_TEST_JENKINS',
    session_parameters={
       'PYTHON_CONNECTOR_QUERY_RESULT_FORMAT': 'json'
    })
@@ -27,7 +27,8 @@ headers = {'Authorization': f'Snowflake Token={token}'}
 #%%
 
 # Set this to the ingress endpoint URL for the whisper service
-url = 'https://anhx4-ahsorg-ahsprod.snowflakecomputing.app'
+#url = 'https://anhx4-ahsorg-ahsprod.snowflakecomputing.app'
+url = 'https://gtj4aqn-ahsorg-ahsprod.snowflakecomputing.app'
 
 # Validate the connection.
 response = requests.get(f'{url}', headers=headers)
